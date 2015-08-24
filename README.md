@@ -21,4 +21,4 @@ Custom transition like Google Play Store Android App. written in Swift.
 
 ## License
 
-ARNZoomImageTransition is available under the MIT license. See the LICENSE file for more info.
+MIT license. See the LICENSE file for more info.
