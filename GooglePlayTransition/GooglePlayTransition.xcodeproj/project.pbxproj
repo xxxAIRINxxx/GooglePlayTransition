@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9159BBE51B877A8300AEF9A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159BBE41B877A8300AEF9A9 /* AppDelegate.swift */; };
+		9159BBE71B877A8300AEF9A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159BBE61B877A8300AEF9A9 /* ViewController.swift */; };
+		9159BBEA1B877A8300AEF9A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9159BBE81B877A8300AEF9A9 /* Main.storyboard */; };
+		9159BBEC1B877A8300AEF9A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9159BBEB1B877A8300AEF9A9 /* Images.xcassets */; };
+		9159BBEF1B877A8300AEF9A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9159BBED1B877A8300AEF9A9 /* LaunchScreen.xib */; };
+		9159BBFB1B877A8300AEF9A9 /* GooglePlayTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159BBFA1B877A8300AEF9A9 /* GooglePlayTransitionTests.swift */; };
+		9159BC051B877AB200AEF9A9 /* ARNTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159BC041B877AB200AEF9A9 /* ARNTransitionAnimator.swift */; };
+		9159BC081B877AF700AEF9A9 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9159BC071B877AF700AEF9A9 /* ModalViewController.swift */; };
+		9178DAEC1B8AA38000049816 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178DAEA1B8AA38000049816 /* MainCell.swift */; };
+		9178DAED1B8AA38000049816 /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9178DAEB1B8AA38000049816 /* MainCell.xib */; };
+		9178DAEF1B8AA41600049816 /* GooglePlayTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178DAEE1B8AA41600049816 /* GooglePlayTransition.swift */; };
+		9178DAF21B8AA73500049816 /* ModalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178DAF11B8AA73500049816 /* ModalCell.swift */; };
+		9178DAF41B8AA76000049816 /* ModalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9178DAF31B8AA76000049816 /* ModalCell.xib */; };
+		9178DAF61B8AAD1900049816 /* GooglePlayTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178DAF51B8AAD1900049816 /* GooglePlayTransitionViewController.swift */; };
+		9178DAF81B8AAE7E00049816 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178DAF71B8AAE7E00049816 /* HeaderView.swift */; };
+		9178DAFA1B8AAEBB00049816 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9178DAF91B8AAEBB00049816 /* HeaderView.xib */; };
+		9178DAFC1B8AB1E800049816 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 9178DAFB1B8AB1E800049816 /* header.png */; };
+		9178DAFE1B8AB1EC00049816 /* cellImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9178DAFD1B8AB1EC00049816 /* cellImage.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9159BBF51B877A8300AEF9A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9159BBD71B877A8300AEF9A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9159BBDE1B877A8300AEF9A9;
+			remoteInfo = GooglePlayTransition;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9159BBDF1B877A8300AEF9A9 /* GooglePlayTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlayTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9159BBE31B877A8300AEF9A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9159BBE41B877A8300AEF9A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9159BBE61B877A8300AEF9A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9159BBE91B877A8300AEF9A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9159BBEB1B877A8300AEF9A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9159BBEE1B877A8300AEF9A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9159BBF41B877A8300AEF9A9 /* GooglePlayTransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GooglePlayTransitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9159BBF91B877A8300AEF9A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9159BBFA1B877A8300AEF9A9 /* GooglePlayTransitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlayTransitionTests.swift; sourceTree = "<group>"; };
+		9159BC041B877AB200AEF9A9 /* ARNTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARNTransitionAnimator.swift; sourceTree = "<group>"; };
+		9159BC071B877AF700AEF9A9 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		9178DAEA1B8AA38000049816 /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		9178DAEB1B8AA38000049816 /* MainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
+		9178DAEE1B8AA41600049816 /* GooglePlayTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlayTransition.swift; sourceTree = "<group>"; };
+		9178DAF11B8AA73500049816 /* ModalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalCell.swift; sourceTree = "<group>"; };
+		9178DAF31B8AA76000049816 /* ModalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalCell.xib; sourceTree = "<group>"; };
+		9178DAF51B8AAD1900049816 /* GooglePlayTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlayTransitionViewController.swift; sourceTree = "<group>"; };
+		9178DAF71B8AAE7E00049816 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		9178DAF91B8AAEBB00049816 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		9178DAFB1B8AB1E800049816 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		9178DAFD1B8AB1EC00049816 /* cellImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cellImage.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9159BBDC1B877A8300AEF9A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9159BBF11B877A8300AEF9A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9159BBD61B877A8300AEF9A9 = {
+			isa = PBXGroup;
+			children = (
+				9159BBE11B877A8300AEF9A9 /* GooglePlayTransition */,
+				9159BBF71B877A8300AEF9A9 /* GooglePlayTransitionTests */,
+				9159BBE01B877A8300AEF9A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9159BBE01B877A8300AEF9A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9159BBDF1B877A8300AEF9A9 /* GooglePlayTransition.app */,
+				9159BBF41B877A8300AEF9A9 /* GooglePlayTransitionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9159BBE11B877A8300AEF9A9 /* GooglePlayTransition */ = {
+			isa = PBXGroup;
+			children = (
+				9159BC061B877ABF00AEF9A9 /* Lib */,
+				9159BBE41B877A8300AEF9A9 /* AppDelegate.swift */,
+				9159BBE61B877A8300AEF9A9 /* ViewController.swift */,
+				9159BC071B877AF700AEF9A9 /* ModalViewController.swift */,
+				9178DAF01B8AA72600049816 /* UI Component */,
+				9178DAFD1B8AB1EC00049816 /* cellImage.jpg */,
+				9178DAFB1B8AB1E800049816 /* header.png */,
+				9159BBE81B877A8300AEF9A9 /* Main.storyboard */,
+				9159BBEB1B877A8300AEF9A9 /* Images.xcassets */,
+				9159BBED1B877A8300AEF9A9 /* LaunchScreen.xib */,
+				9159BBE21B877A8300AEF9A9 /* Supporting Files */,
+			);
+			path = GooglePlayTransition;
+			sourceTree = "<group>";
+		};
+		9159BBE21B877A8300AEF9A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9159BBE31B877A8300AEF9A9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9159BBF71B877A8300AEF9A9 /* GooglePlayTransitionTests */ = {
+			isa = PBXGroup;
+			children = (
+				9159BBFA1B877A8300AEF9A9 /* GooglePlayTransitionTests.swift */,
+				9159BBF81B877A8300AEF9A9 /* Supporting Files */,
+			);
+			path = GooglePlayTransitionTests;
+			sourceTree = "<group>";
+		};
+		9159BBF81B877A8300AEF9A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9159BBF91B877A8300AEF9A9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9159BC061B877ABF00AEF9A9 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				9159BC041B877AB200AEF9A9 /* ARNTransitionAnimator.swift */,
+				9178DAEE1B8AA41600049816 /* GooglePlayTransition.swift */,
+				9178DAF51B8AAD1900049816 /* GooglePlayTransitionViewController.swift */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		9178DAF01B8AA72600049816 /* UI Component */ = {
+			isa = PBXGroup;
+			children = (
+				9178DAEA1B8AA38000049816 /* MainCell.swift */,
+				9178DAEB1B8AA38000049816 /* MainCell.xib */,
+				9178DAF11B8AA73500049816 /* ModalCell.swift */,
+				9178DAF31B8AA76000049816 /* ModalCell.xib */,
+				9178DAF71B8AAE7E00049816 /* HeaderView.swift */,
+				9178DAF91B8AAEBB00049816 /* HeaderView.xib */,
+			);
+			name = "UI Component";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9159BBDE1B877A8300AEF9A9 /* GooglePlayTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9159BBFE1B877A8300AEF9A9 /* Build configuration list for PBXNativeTarget "GooglePlayTransition" */;
+			buildPhases = (
+				9159BBDB1B877A8300AEF9A9 /* Sources */,
+				9159BBDC1B877A8300AEF9A9 /* Frameworks */,
+				9159BBDD1B877A8300AEF9A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GooglePlayTransition;
+			productName = GooglePlayTransition;
+			productReference = 9159BBDF1B877A8300AEF9A9 /* GooglePlayTransition.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9159BBF31B877A8300AEF9A9 /* GooglePlayTransitionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9159BC011B877A8300AEF9A9 /* Build configuration list for PBXNativeTarget "GooglePlayTransitionTests" */;
+			buildPhases = (
+				9159BBF01B877A8300AEF9A9 /* Sources */,
+				9159BBF11B877A8300AEF9A9 /* Frameworks */,
+				9159BBF21B877A8300AEF9A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9159BBF61B877A8300AEF9A9 /* PBXTargetDependency */,
+			);
+			name = GooglePlayTransitionTests;
+			productName = GooglePlayTransitionTests;
+			productReference = 9159BBF41B877A8300AEF9A9 /* GooglePlayTransitionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9159BBD71B877A8300AEF9A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = xxxAIRINxxx;
+				TargetAttributes = {
+					9159BBDE1B877A8300AEF9A9 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					9159BBF31B877A8300AEF9A9 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 9159BBDE1B877A8300AEF9A9;
+					};
+				};
+			};
+			buildConfigurationList = 9159BBDA1B877A8300AEF9A9 /* Build configuration list for PBXProject "GooglePlayTransition" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9159BBD61B877A8300AEF9A9;
+			productRefGroup = 9159BBE01B877A8300AEF9A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9159BBDE1B877A8300AEF9A9 /* GooglePlayTransition */,
+				9159BBF31B877A8300AEF9A9 /* GooglePlayTransitionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9159BBDD1B877A8300AEF9A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9159BBEA1B877A8300AEF9A9 /* Main.storyboard in Resources */,
+				9178DAF41B8AA76000049816 /* ModalCell.xib in Resources */,
+				9159BBEF1B877A8300AEF9A9 /* LaunchScreen.xib in Resources */,
+				9178DAFC1B8AB1E800049816 /* header.png in Resources */,
+				9178DAFA1B8AAEBB00049816 /* HeaderView.xib in Resources */,
+				9159BBEC1B877A8300AEF9A9 /* Images.xcassets in Resources */,
+				9178DAED1B8AA38000049816 /* MainCell.xib in Resources */,
+				9178DAFE1B8AB1EC00049816 /* cellImage.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9159BBF21B877A8300AEF9A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9159BBDB1B877A8300AEF9A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9178DAF61B8AAD1900049816 /* GooglePlayTransitionViewController.swift in Sources */,
+				9178DAF81B8AAE7E00049816 /* HeaderView.swift in Sources */,
+				9159BC081B877AF700AEF9A9 /* ModalViewController.swift in Sources */,
+				9159BBE71B877A8300AEF9A9 /* ViewController.swift in Sources */,
+				9178DAF21B8AA73500049816 /* ModalCell.swift in Sources */,
+				9159BBE51B877A8300AEF9A9 /* AppDelegate.swift in Sources */,
+				9178DAEF1B8AA41600049816 /* GooglePlayTransition.swift in Sources */,
+				9159BC051B877AB200AEF9A9 /* ARNTransitionAnimator.swift in Sources */,
+				9178DAEC1B8AA38000049816 /* MainCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9159BBF01B877A8300AEF9A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9159BBFB1B877A8300AEF9A9 /* GooglePlayTransitionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9159BBF61B877A8300AEF9A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9159BBDE1B877A8300AEF9A9 /* GooglePlayTransition */;
+			targetProxy = 9159BBF51B877A8300AEF9A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9159BBE81B877A8300AEF9A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9159BBE91B877A8300AEF9A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9159BBED1B877A8300AEF9A9 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9159BBEE1B877A8300AEF9A9 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9159BBFC1B877A8300AEF9A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9159BBFD1B877A8300AEF9A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9159BBFF1B877A8300AEF9A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GooglePlayTransition/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9159BC001B877A8300AEF9A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GooglePlayTransition/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9159BC021B877A8300AEF9A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GooglePlayTransitionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GooglePlayTransition.app/GooglePlayTransition";
+			};
+			name = Debug;
+		};
+		9159BC031B877A8300AEF9A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GooglePlayTransitionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GooglePlayTransition.app/GooglePlayTransition";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9159BBDA1B877A8300AEF9A9 /* Build configuration list for PBXProject "GooglePlayTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9159BBFC1B877A8300AEF9A9 /* Debug */,
+				9159BBFD1B877A8300AEF9A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9159BBFE1B877A8300AEF9A9 /* Build configuration list for PBXNativeTarget "GooglePlayTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9159BBFF1B877A8300AEF9A9 /* Debug */,
+				9159BC001B877A8300AEF9A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9159BC011B877A8300AEF9A9 /* Build configuration list for PBXNativeTarget "GooglePlayTransitionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9159BC021B877A8300AEF9A9 /* Debug */,
+				9159BC031B877A8300AEF9A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9159BBD71B877A8300AEF9A9 /* Project object */;
+}

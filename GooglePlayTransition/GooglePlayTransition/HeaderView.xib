@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="EXj-au-IRo" customClass="HeaderView" customModule="GooglePlayTransition" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header.png" translatesAutoresizingMaskIntoConstraints="NO" id="lJB-3T-4Uj">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYT-4m-gQg">
+                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="d2K-KQ-ges"/>
+                        <constraint firstAttribute="height" constant="50" id="j9F-nk-Xvt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" red="0.0" green="0.71694016650000003" blue="0.28729823310000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tapBackButton" destination="EXj-au-IRo" eventType="touchUpInside" id="rvZ-ea-tAW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.71694016647894721" blue="0.2872982330763158" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="lJB-3T-4Uj" firstAttribute="leading" secondItem="EXj-au-IRo" secondAttribute="leading" id="EHq-sb-1Jk"/>
+                <constraint firstItem="TYT-4m-gQg" firstAttribute="top" secondItem="EXj-au-IRo" secondAttribute="top" constant="8" id="Evn-P0-mAD"/>
+                <constraint firstAttribute="trailing" secondItem="lJB-3T-4Uj" secondAttribute="trailing" id="KWH-zq-aXJ"/>
+                <constraint firstAttribute="bottom" secondItem="lJB-3T-4Uj" secondAttribute="bottom" id="Ox4-3D-Js1"/>
+                <constraint firstItem="lJB-3T-4Uj" firstAttribute="top" secondItem="EXj-au-IRo" secondAttribute="top" id="oPf-5N-f3V"/>
+                <constraint firstItem="TYT-4m-gQg" firstAttribute="leading" secondItem="EXj-au-IRo" secondAttribute="leading" constant="8" id="qLM-Ex-gXA"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="lJB-3T-4Uj" id="GbG-0W-G7u"/>
+            </connections>
+            <point key="canvasLocation" x="141" y="148"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="header.png" width="975" height="180"/>
+    </resources>
+</document>
