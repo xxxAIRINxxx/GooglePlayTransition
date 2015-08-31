@@ -34,7 +34,14 @@ public class ARNTransitionAnimator: UIPercentDrivenInteractiveTransition {
     
     // interactive gesture
     
-    public weak var gestureTargetView : UIView?
+    public weak var gestureTargetView : UIView? {
+        willSet {
+            self.unregisterPanGesture()
+        }
+        didSet {
+            self.registerPanGesture()
+        }
+    }
     public var panCompletionThreshold : CGFloat = 100.0
     public var direction : ARNTransitionAnimatorDirection = .Bottom
     public var contentScrollView : UIScrollView? {
@@ -108,6 +115,7 @@ public class ARNTransitionAnimator: UIPercentDrivenInteractiveTransition {
         
         self.gesture = UIPanGestureRecognizer(target: self, action: "handlePan:")
         self.gesture!.delegate = self
+        self.gesture!.maximumNumberOfTouches = 1
         
         if let _gestureTargetView = self.gestureTargetView {
             _gestureTargetView.addGestureRecognizer(self.gesture!)
@@ -242,9 +250,17 @@ public class ARNTransitionAnimator: UIPercentDrivenInteractiveTransition {
                 animationRatio = (location.x - self.panLocationStart) / CGRectGetWidth(bounds)
             }
             
-            if self.contentScrollView != nil && animationRatio <= 0 {
-                self.startGestureTransition()
-                self.contentScrollView!.bounces = false
+            if animationRatio < 0 {
+                animationRatio = 0
+            }
+            
+            if let _contentScrollView = self.contentScrollView {
+                if self.isTransitioning == false && _contentScrollView.contentOffset.y <= 0 {
+                    self.startGestureTransition()
+                    self.contentScrollView!.bounces = false
+                } else {
+                    self.updateInteractiveTransition(animationRatio)
+                }
             } else {
                 self.updateInteractiveTransition(animationRatio)
             }
