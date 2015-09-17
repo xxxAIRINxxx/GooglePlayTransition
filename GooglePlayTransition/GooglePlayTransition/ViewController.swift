@@ -19,7 +19,7 @@ class ViewController: UIViewController, GooglePlayTransitionInterface {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var flowLayout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let flowLayout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         flowLayout.sectionInset = UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)
         flowLayout.itemSize = CGSizeMake(90, 90)
         flowLayout.minimumLineSpacing = 10
@@ -32,7 +32,7 @@ class ViewController: UIViewController, GooglePlayTransitionInterface {
     // MARK: - GooglePlayTransitionInterface
     
     func createTransitionImageView() -> UIImageView {
-        var imageView = UIImageView(image: self.selectedImageView!.image)
+        let imageView = UIImageView(image: self.selectedImageView!.image)
         imageView.contentMode = self.selectedImageView!.contentMode
         imageView.clipsToBounds = true
         imageView.userInteractionEnabled = false

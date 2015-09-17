@@ -44,7 +44,7 @@ import UIKit
 class GooglePlayTransition {
    
     class func createAnimator(operationType: ARNTransitionAnimatorOperation, fromVC: UIViewController, toVC: UIViewController) -> ARNTransitionAnimator {
-        var animator = ARNTransitionAnimator(operationType: operationType, fromVC: fromVC, toVC: toVC)
+        let animator = ARNTransitionAnimator(operationType: operationType, fromVC: fromVC, toVC: toVC)
         
         if let sourceTransition = fromVC as? GooglePlayTransitionInterface, let destinationTransition = toVC as? GooglePlayTransitionInterface {
             
@@ -61,7 +61,7 @@ class GooglePlayTransition {
                 let sourceImageView = sourceTransition!.createTransitionImageView()
                 let destinationImageView = destinationTransition!.createTransitionImageView()
                 
-                var destinationHeaderImageView = destinationTransition!.createTransitionHeaderImageView?()
+                let destinationHeaderImageView = destinationTransition!.createTransitionHeaderImageView?()
                 var circleView : UIView?
                 
                 if let _destinationHeaderImageView = destinationHeaderImageView {
@@ -143,7 +143,7 @@ class GooglePlayTransition {
                 sourceTransition!.dismissalBeforeAction?()
                 destinationTransition!.dismissalBeforeAction?()
                 
-                var sourceHeaderImageView = sourceTransition!.createTransitionHeaderImageView?()
+                let sourceHeaderImageView = sourceTransition!.createTransitionHeaderImageView?()
                 if let _sourceHeaderImageView = sourceHeaderImageView {
                     containerView.addSubview(_sourceHeaderImageView)
                 }

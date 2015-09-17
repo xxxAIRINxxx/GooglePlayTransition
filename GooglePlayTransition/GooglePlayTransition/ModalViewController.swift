@@ -15,7 +15,7 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
     var headerView : HeaderView!
     
     deinit {
-        println("deinit ModalViewController")
+        print("deinit ModalViewController")
     }
 
     override func viewDidLoad() {
@@ -24,12 +24,7 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
         self.tableView.registerNib(UINib(nibName: "ModalCell", bundle: nil), forCellReuseIdentifier: "ModalCell")
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         
-        // FIXME : layout diff
-        let versionString =  UIDevice.currentDevice().systemVersion
-        let version = NSString(string: versionString).floatValue
-        if version >= 8.0 {
-            self.tableView.layoutMargins = UIEdgeInsetsZero
-        }
+        self.tableView.layoutMargins = UIEdgeInsetsZero
         
         self.headerView = UINib(nibName: "HeaderView", bundle: NSBundle.mainBundle()).instantiateWithOwner(nil, options: nil)[0] as! HeaderView
         headerView.tapButtonHandler = { [weak self] in
@@ -44,7 +39,7 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
     func createTransitionImageView() -> UIImageView {
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         let cell = self.tableView(self.tableView, cellForRowAtIndexPath: indexPath) as! ModalCell
-        var imageView = UIImageView(image: cell.cellImageView.image)
+        let imageView = UIImageView(image: cell.cellImageView.image)
         imageView.contentMode = cell.cellImageView.contentMode
         imageView.clipsToBounds = true
         imageView.userInteractionEnabled = false
@@ -54,7 +49,7 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
     }
     
     func createTransitionHeaderImageView() -> UIImageView {
-        var imageView = UIImageView(image: self.headerView.imageView.image)
+        let imageView = UIImageView(image: self.headerView.imageView.image)
         imageView.contentMode = self.headerView.imageView.contentMode
         imageView.clipsToBounds = true
         imageView.userInteractionEnabled = false
@@ -78,7 +73,7 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
         UIView.animateWithDuration(
             0.28,
             delay: 0.05,
-            options: .TransitionCrossDissolve | .CurveLinear,
+            options: [.TransitionCrossDissolve, .CurveLinear],
             animations: {
                 self.headerView.imageView.alpha = 1.0
             },
@@ -91,7 +86,7 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
         self.headerView.hidden = true
         
         // FIXME : reusableCell imageView hidden
-        for cell in self.tableView.visibleCells() as! [UITableViewCell] {
+        for cell in self.tableView.visibleCells {
             if cell is ModalCell {
                 let headCell = cell as! ModalCell
                 headCell.cellImageView.hidden = true
@@ -122,7 +117,7 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
             return cell
         }
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath) 
         
         cell.backgroundColor = UIColor.whiteColor()
         
