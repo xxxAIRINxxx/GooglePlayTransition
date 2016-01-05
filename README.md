@@ -11,6 +11,8 @@ Custom transition like Google Play Store Android App. written in Swift.
 
 ## Using Transition Animator
 
+This sample have created as a showcase of ARNTransitionAnimator.
+
 [ARNTransitionAnimator](https://github.com/xxxAIRINxxx/ARNTransitionAnimator)
 
 
