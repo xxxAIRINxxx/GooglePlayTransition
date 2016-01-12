@@ -8,6 +8,9 @@
 
 Custom transition like Google Play Store Android App. written in Swift.
 
+## Demo
+
+[See demo on Appetize.io](https://appetize.io/app/4htr333kh9awmztpq0rfzap620?device=iphone5s&scale=75&orientation=portrait&osVersion=9.2)
 
 ## Using Transition Animator
 
