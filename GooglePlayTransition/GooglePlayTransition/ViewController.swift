@@ -30,6 +30,16 @@ class ViewController: UIViewController, GooglePlayTransitionInterface {
         self.collectionView.registerNib(UINib(nibName: "MainCell", bundle: nil), forCellWithReuseIdentifier: "MainCell")
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print("ViewController viewWillAppear")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("ViewController viewWillDisappear")
+    }
+    
     // MARK: - GooglePlayTransitionInterface
     
     func createTransitionImageView() -> UIImageView {

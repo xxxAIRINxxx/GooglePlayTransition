@@ -34,6 +34,16 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
         self.tableView.tableHeaderView = self.headerView
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print("ModalViewController viewWillAppear")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("ModalViewController viewWillDisappear")
+    }
+    
     // MARK: - GooglePlayTransitionInterface
     
     func createTransitionImageView() -> UIImageView {
