@@ -107,7 +107,6 @@ final class GooglePlayTransitionAnimation : TransitionAnimatable {
             }
 
             containerView.addSubview(sourceImageView!)
-
             containerView.addSubview(destinationImageView!)
             destinationImageView?.isHidden = true
 
@@ -116,8 +115,9 @@ final class GooglePlayTransitionAnimation : TransitionAnimatable {
 
             modalVC.view.alpha = 0.0
         } else {
-            sourceImageView = rootVC.createTransitionImageView()
-            destinationImageView = modalVC.createTransitionImageView()
+            sourceImageView = modalVC.createTransitionImageView()
+            destinationImageView = rootVC.createTransitionImageView()
+            sourceImageView!.layer.cornerRadius = destinationImageView!.layer.cornerRadius
             containerView.addSubview(sourceImageView!)
 
             rootVC.dismissalBeforeAction()
@@ -139,7 +139,6 @@ final class GooglePlayTransitionAnimation : TransitionAnimatable {
             modalVC.presentationAnimationAction(percentComplete)
         } else {
             sourceImageView?.frame = destinationImageView?.frame ?? CGRect.zero
-            sourceImageView?.layer.cornerRadius = destinationImageView?.layer.cornerRadius ?? 0
 
             if let _sourceHeaderImageView = sourceHeaderImageView {
                 _sourceHeaderImageView.frame.origin.y -= _sourceHeaderImageView.frame.size.height
@@ -170,7 +169,12 @@ final class GooglePlayTransitionAnimation : TransitionAnimatable {
 
 extension GooglePlayTransitionAnimation {
 
-    func sourceVC() -> UIViewController { return self.rootVC }
+    func sourceVC() -> UIViewController {
+        if let nav = self.rootVC.navigationController {
+            return nav
+        }
+        return self.rootVC
+    }
 
     func destVC() -> UIViewController { return self.modalVC }
 }

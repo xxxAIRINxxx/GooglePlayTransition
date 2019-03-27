@@ -34,6 +34,11 @@ final class ViewController: UIViewController, GooglePlayTransitionInterface, UIC
         super.viewWillAppear(animated)
         print("ViewController viewWillAppear")
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animator = nil
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -52,11 +57,11 @@ final class ViewController: UIViewController, GooglePlayTransitionInterface, UIC
         
         return imageView
     }
-    
-    func presentationCompletionAction(_ completeTransition: Bool) {
+
+    func presentationBeforeAction() {
         self.selectedImageView?.isHidden = true
     }
-    
+
     func dismissalCompletionAction(_ completeTransition: Bool) {
         self.selectedImageView?.isHidden = false
     }
@@ -82,7 +87,7 @@ final class ViewController: UIViewController, GooglePlayTransitionInterface, UIC
         let controller = storyboard.instantiateViewController(withIdentifier: "ModalViewController") as! ModalViewController
 
         let animation = GooglePlayTransitionAnimation(rootVC: self, modalVC: controller)
-        self.animator = ARNTransitionAnimator(duration: 0.5, animation: animation)
+        self.animator = ARNTransitionAnimator(duration: 0.8, animation: animation)
         controller.transitioningDelegate = self.animator
 
         self.present(controller, animated: true, completion: nil)

@@ -63,6 +63,9 @@ final class ModalViewController: UIViewController, GooglePlayTransitionInterface
         imageView.clipsToBounds = true
         imageView.isUserInteractionEnabled = false
         imageView.frame = headerView.imageView.frame
+        if #available(iOS 11.0, *) {
+            imageView.frame.origin.y += self.view.safeAreaInsets.top
+        }
 
         return imageView;
     }
@@ -92,8 +95,7 @@ final class ModalViewController: UIViewController, GooglePlayTransitionInterface
     
     func dismissalBeforeAction() {
         self.view.backgroundColor = UIColor.clear
-        self.headerView.isHidden = true
-        
+
         // FIXME : reusableCell imageView hidden
         for cell in self.tableView.visibleCells {
             if cell is ModalCell {
@@ -110,7 +112,7 @@ final class ModalViewController: UIViewController, GooglePlayTransitionInterface
     // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2;
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
