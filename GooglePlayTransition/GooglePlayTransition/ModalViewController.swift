@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransitionInterface {
+final class ModalViewController: UIViewController, GooglePlayTransitionInterface, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView : UITableView!
     
@@ -21,25 +21,24 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.registerNib(UINib(nibName: "ModalCell", bundle: nil), forCellReuseIdentifier: "ModalCell")
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        self.tableView.register(UINib(nibName: "ModalCell", bundle: nil), forCellReuseIdentifier: "ModalCell")
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         
-        self.tableView.layoutMargins = UIEdgeInsetsZero
-        
-        self.headerView = UINib(nibName: "HeaderView", bundle: NSBundle.mainBundle()).instantiateWithOwner(nil, options: nil)[0] as! HeaderView
+        self.tableView.layoutMargins = UIEdgeInsets.zero
+        self.headerView = UINib(nibName: "HeaderView", bundle: nil).instantiate(withOwner: nil, options: nil).first as? HeaderView
         headerView.tapButtonHandler = { [weak self] in
-            self!.dismissViewControllerAnimated(true, completion: nil)
+            self!.dismiss(animated: true, completion: nil)
         }
         
         self.tableView.tableHeaderView = self.headerView
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("ModalViewController viewWillAppear")
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("ModalViewController viewWillDisappear")
     }
@@ -47,13 +46,13 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
     // MARK: - GooglePlayTransitionInterface
     
     func createTransitionImageView() -> UIImageView {
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        let cell = self.tableView(self.tableView, cellForRowAtIndexPath: indexPath) as! ModalCell
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cell = self.tableView.cellForRow(at: indexPath) as! ModalCell
         let imageView = UIImageView(image: cell.cellImageView.image)
         imageView.contentMode = cell.cellImageView.contentMode
         imageView.clipsToBounds = true
-        imageView.userInteractionEnabled = false
-        imageView.frame = cell.cellImageView.convertRect(cell.cellImageView.bounds, toView: self.view)
+        imageView.isUserInteractionEnabled = false
+        imageView.frame = cell.cellImageView.convert(cell.cellImageView.bounds, to: self.view)
         
         return imageView
     }
@@ -62,7 +61,7 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
         let imageView = UIImageView(image: self.headerView.imageView.image)
         imageView.contentMode = self.headerView.imageView.contentMode
         imageView.clipsToBounds = true
-        imageView.userInteractionEnabled = false
+        imageView.isUserInteractionEnabled = false
         imageView.frame = headerView.imageView.frame
 
         return imageView;
@@ -77,13 +76,13 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
         self.tableView.alpha = 0.0
     }
     
-    func presentationCompletionAction(completeTransition: Bool) {
+    func presentationCompletionAction(_ completeTransition: Bool) {
         self.tableView.alpha = 1.0
         
-        UIView.animateWithDuration(
-            0.28,
+        UIView.animate(
+            withDuration: 0.28,
             delay: 0.05,
-            options: [.TransitionCrossDissolve, .CurveLinear],
+            options: [.transitionCrossDissolve, .curveLinear],
             animations: {
                 self.headerView.imageView.alpha = 1.0
             },
@@ -92,51 +91,51 @@ class ModalViewController: GooglePlayTransitionViewController, GooglePlayTransit
     }
     
     func dismissalBeforeAction() {
-        self.view.backgroundColor = UIColor.clearColor()
-        self.headerView.hidden = true
+        self.view.backgroundColor = UIColor.clear
+        self.headerView.isHidden = true
         
         // FIXME : reusableCell imageView hidden
         for cell in self.tableView.visibleCells {
             if cell is ModalCell {
                 let headCell = cell as! ModalCell
-                headCell.cellImageView.hidden = true
+                headCell.cellImageView.isHidden = true
             }
         }
     }
     
-    func dismissalAnimationAction(percentComplete: CGFloat) {
+    func dismissalAnimationAction(_ percentComplete: CGFloat) {
         self.tableView.frame.origin.y = self.view.frame.size.height
     }
     
     // MARK: - UITableViewDataSource
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         }
         return 10
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("ModalCell", forIndexPath: indexPath) as! ModalCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ModalCell", for: indexPath as IndexPath) as! ModalCell
             return cell
         }
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath as IndexPath)
         
-        cell.backgroundColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor.white
         
         return cell
     }
     
     // MARK: - UITableViewDelegate
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return 100
         }

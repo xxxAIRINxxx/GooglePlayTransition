@@ -1,16 +1,23 @@
 # ARNTransitionAnimator
 
-[![Language: Swift](https://img.shields.io/badge/lang-Swift-yellow.svg?style=flat)](https://developer.apple.com/swift/)
+[![Version](https://img.shields.io/cocoapods/v/ARNTransitionAnimator.svg?style=flat)](http://cocoadocs.org/docsets/ARNTransitionAnimator)
+[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](https://developer.apple.com/swift/)
+[![Xcode 10.2](https://img.shields.io/badge/Xcode-10.2-blue.svg?style=flat)](https://developer.apple.com/swift/)
 
 Custom transition & interactive transition animator for iOS. written in Swift.
 
-
 ## Requirements
 
-* Xcode 7.0
-* iOS 8.0+
-* Swift 2.0
+* Xcode 10+
 
+|            | OS                         | Swift         |
+|------------|------------------|--------------|
+| **v2.1.2** | iOS 8+ | 3.0      |
+| **v2.2.x** | iOS 8+ | 3.2      |
+| **v3.0.x** | iOS 9+ | 4.1      |
+| **v3.1.x** | iOS 9+ | 4.2      |
+| **v3.2.x** | iOS 10+ | 5.0      |
 
 ## Installation
 
@@ -19,22 +26,19 @@ Custom transition & interactive transition animator for iOS. written in Swift.
 ARNTransitionAnimator is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```
-
-platform :ios, '8.0'
+```ruby
 use_frameworks!
 
 pod "ARNTransitionAnimator"
-
 ```
 
 ### Carthage
 
 To integrate ARNTransitionAnimator into your Xcode project using Carthage, specify it in your Cartfile:
 
-```
+```ruby
 
-github "ARNTransitionAnimator/ARNTransitionAnimator"
+github "xxxAIRINxxx/ARNTransitionAnimator"
 
 ```
 
@@ -67,7 +71,6 @@ github "ARNTransitionAnimator/ARNTransitionAnimator"
 
 ### [MusicPlayerTransition](https://github.com/xxxAIRINxxx/MusicPlayerTransition)
 ![capture_MusicPlayerTransition](gifs/MusicPlayerTransition.gif "capture_MusicPlayerTransition")
-
 
 ## License
 

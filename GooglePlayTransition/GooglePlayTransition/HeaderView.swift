@@ -10,7 +10,7 @@ import UIKit
 
 class HeaderView: UIView {
     
-    var tapButtonHandler : (Void -> Void)?
+    var tapButtonHandler : (() -> Void)?
    
     @IBOutlet weak var imageView : UIImageView!
     
